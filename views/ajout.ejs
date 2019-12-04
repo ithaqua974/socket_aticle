@@ -10,32 +10,56 @@
     <title>Ajouter un article</title>
 </head>
 
-<body>
-    <div class="container shadow-lg">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title"> formulaire d'ajout d'article</div>
-            </div>
-            <div class="card-body">
-                <form class="form-inline">
-                    <div class="form-group mb-2">
-                        <label for="staticEmail2" class="sr-only">Email</label>
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail2"
-                            value="email@example.com">
+<body class="bg-secondary">
+
+    <div class="container bg-white shadow-lg">
+        <%- include('partials/nav') %>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title"> formulaire d'ajout d'article</div>
                     </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                        <label for="inputPassword2" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+                    <div class="card-body">
+
+                        <form class="form-inline" action="/add" method="POST">
+                            <div class="form-group mb-2">
+                                <label for="titre" class="sr-only">Titre</label>
+                                <input type="text" readonly class="form-control-plaintext" id="titre"
+                                    value="un super titre">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="Text" class="sr-only">Text</label>
+                                <input type="text" class="form-control" id="text" placeholder="texxt de l'article">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
-                </form>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary mb-2">Ajouter</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="card-footer"></div>
+            <div class="col-md-6"></div>
         </div>
 
 
-    </div>
 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
